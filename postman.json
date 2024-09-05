@@ -1,0 +1,835 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "82a2a880-8e79-4bd3-9ada-a51aab4fc816",
+      "name": "Team-1 Backend",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2024-09-03T22:00:49.000Z",
+      "createdAt": "2024-08-26T12:13:01.000Z",
+      "lastUpdatedBy": "34052771",
+      "uid": "34052771-82a2a880-8e79-4bd3-9ada-a51aab4fc816"
+    },
+    "item": [
+      {
+        "name": "courses",
+        "item": [
+          {
+            "name": "create course",
+            "id": "01dadc26-30a3-44dc-b232-13c87c339616",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "\r\n\r\n{\r\n    \"title\":\"Backend-4\",\r\n    \"instructor\":\"islam\",\r\n    \"description\":\"good\",\r\n    \"category\":\"web\",\r\n    \"price\":90,\r\n    \"level\":6,\r\n    \"publishDate\":\"15/6\",\r\n    \"coverPhoto\":\"/images/course/pngtree-certificate-elements-layout-with-wavy-shape-border-png-image_934770.jpg\"\r\n    \r\n\r\n\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/courses/",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courses", ""]
+              }
+            },
+            "response": [],
+            "uid": "34052771-01dadc26-30a3-44dc-b232-13c87c339616"
+          },
+          {
+            "name": "get all courses",
+            "id": "8779a09c-b303-48da-9360-eef91a471c39",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/courses/",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courses", ""]
+              }
+            },
+            "response": [],
+            "uid": "34052771-8779a09c-b303-48da-9360-eef91a471c39"
+          },
+          {
+            "name": "get specific course",
+            "id": "aeb3278b-ddf0-4188-9103-457585398dfd",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/courses/66d783ad94b3ea8bb8777c81",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courses", "66d783ad94b3ea8bb8777c81"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-aeb3278b-ddf0-4188-9103-457585398dfd"
+          },
+          {
+            "name": "update course",
+            "id": "bcc86fe9-24b9-4814-bac1-a00894e10e9a",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "\r\n{\r\n    \"title\":\"Backend12080\",\r\n    \"instructor\":\"islam mohamed\",\r\n    \"description\":\"good\",\r\n    \"category\":\"web\",\r\n    \"price\":90,\r\n    \"publishDate\":\"1/9\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/courses/66d783ad94b3ea8bb8777c81",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courses", "66d783ad94b3ea8bb8777c81"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-bcc86fe9-24b9-4814-bac1-a00894e10e9a"
+          },
+          {
+            "name": "delete course",
+            "id": "bb84cadc-26e1-426f-a176-85453c1ba18d",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/courses/66d783ad94b3ea8bb8777c81",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courses", "66d783ad94b3ea8bb8777c81"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-bb84cadc-26e1-426f-a176-85453c1ba18d"
+          },
+          {
+            "name": "course index",
+            "id": "7255470e-f25b-4df1-b671-18ecc917af1f",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/courses/index",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courses", "index"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-7255470e-f25b-4df1-b671-18ecc917af1f"
+          }
+        ],
+        "id": "75e8f5a5-dcdb-43de-9e9c-da414236ea0d",
+        "uid": "34052771-75e8f5a5-dcdb-43de-9e9c-da414236ea0d"
+      },
+      {
+        "name": "exames",
+        "item": [
+          {
+            "name": "create exam",
+            "id": "6d611d57-0077-45ca-a36f-10f329e3297e",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"level\":\"round31\",\r\n    \"course_Id\":\"66d784aad41b16b868b3ad24\",\r\n    \"duration\":2\r\n    \r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/exams/",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "exams", ""]
+              }
+            },
+            "response": [],
+            "uid": "34052771-6d611d57-0077-45ca-a36f-10f329e3297e"
+          },
+          {
+            "name": "get all exams",
+            "id": "7160878f-d0f3-42df-9b01-1120a84bdc41",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/exams/",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "exams", ""]
+              }
+            },
+            "response": [],
+            "uid": "34052771-7160878f-d0f3-42df-9b01-1120a84bdc41"
+          },
+          {
+            "name": "get an exam",
+            "id": "e2b6638b-4dbe-4652-90a8-505a376d38c1",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/exams/66d786797993a7e20c2ffae7",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "exams", "66d786797993a7e20c2ffae7"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-e2b6638b-4dbe-4652-90a8-505a376d38c1"
+          },
+          {
+            "name": "update exam",
+            "id": "1d796f2f-615d-4dab-8e39-0e31d9c9e434",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"level\":\"round10\",\r\n    \"course_Id\":\"66d784aad41b16b868b3ad24\",\r\n    \"duration\":1.5\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/exams/66d786797993a7e20c2ffae7",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "exams", "66d786797993a7e20c2ffae7"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-1d796f2f-615d-4dab-8e39-0e31d9c9e434"
+          },
+          {
+            "name": "delete exam",
+            "id": "f9d3be4c-53f0-4e95-89e6-84cc5d2b80ba",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/exams/66d786797993a7e20c2ffae7",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "exams", "66d786797993a7e20c2ffae7"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-f9d3be4c-53f0-4e95-89e6-84cc5d2b80ba"
+          }
+        ],
+        "id": "ca88530b-5f43-4ef1-9d54-9e9ec4b198f5",
+        "uid": "34052771-ca88530b-5f43-4ef1-9d54-9e9ec4b198f5"
+      },
+      {
+        "name": "questions",
+        "item": [
+          {
+            "name": "create question",
+            "id": "67a83145-c3c8-4b6e-b9e9-cdfdeb533ae4",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"exam_Id\":\"66d7866c7993a7e20c2ffae5\",\r\n    \"question_type\":\"mcq\",\r\n    \"question\":\"what is node.js\",\r\n    \"mark\":2,\r\n    \"images\":\"/images/course/pngtree-certificate-elements-layout-with-wavy-shape-border-png-image_934770.jpg\",\r\n    \"options\":[\"jj\",\"ll\",\"oo\"],\r\n    \"answer\":\"language\"\r\n\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/questions/",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "questions", ""]
+              }
+            },
+            "response": [],
+            "uid": "34052771-67a83145-c3c8-4b6e-b9e9-cdfdeb533ae4"
+          },
+          {
+            "name": "get all questions",
+            "id": "b32f6dfa-d266-493e-b315-c778932254de",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/questions/",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "questions", ""]
+              }
+            },
+            "response": [],
+            "uid": "34052771-b32f6dfa-d266-493e-b315-c778932254de"
+          },
+          {
+            "name": "get a question",
+            "id": "a4b993da-6480-4048-b3fe-3ed6c029ed31",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/questions/66d78906f520bd8740477775",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "questions", "66d78906f520bd8740477775"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-a4b993da-6480-4048-b3fe-3ed6c029ed31"
+          },
+          {
+            "name": "update question",
+            "id": "6925ceaa-3af5-4781-9585-f00d5d2f0697",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n   \r\n        \r\n        \"question_type\": \"mcq\",\r\n        \"question\": \"what is node.js\",\r\n        \"mark\": 2,\r\n        \"images\": \"/images/course/pngtree-certificate-elements-layout-with-wavy-shape-border-png-image_934770.jpg\",\r\n        \"options\": [\"kk\",\"ii\",\"language\"],\r\n        \"answer\": \"language\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/questions/66d78951f520bd8740477778",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "questions", "66d78951f520bd8740477778"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-6925ceaa-3af5-4781-9585-f00d5d2f0697"
+          },
+          {
+            "name": "delete question",
+            "id": "4e2cc5d3-c37c-4e11-9d21-6675a4865756",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/questions/66d78906f520bd8740477775",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "questions", "66d78906f520bd8740477775"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-4e2cc5d3-c37c-4e11-9d21-6675a4865756"
+          }
+        ],
+        "id": "5dc7ae0e-4d88-4e2c-928d-4e1131850d6b",
+        "uid": "34052771-5dc7ae0e-4d88-4e2c-928d-4e1131850d6b"
+      },
+      {
+        "name": "lessons",
+        "item": [
+          {
+            "name": "create lesson",
+            "id": "b08ca787-9d79-4d23-bdb0-d148146346d7",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"title\":\"lesson2\",\r\n    \"description\":\"good\",\r\n    \"unit_Id\":\"66d78bfd1abd4b11472b7697\",\r\n    \"course_Id\":\"66d784aad41b16b868b3ad24\",\r\n    \"order\":2,\r\n    \"url\":\"https://www.youtube.com/watch?v=VtGGjIhTANM\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/lessons/",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "lessons", ""]
+              }
+            },
+            "response": [],
+            "uid": "34052771-b08ca787-9d79-4d23-bdb0-d148146346d7"
+          },
+          {
+            "name": "get all lessons",
+            "id": "9a849543-308a-4965-ad67-c4dfd352b251",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/lessons/",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "lessons", ""]
+              }
+            },
+            "response": [],
+            "uid": "34052771-9a849543-308a-4965-ad67-c4dfd352b251"
+          },
+          {
+            "name": "get lesson",
+            "id": "85fd8919-4d13-40b4-aa24-fb4e3d001574",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/lessons/66d78ca31abd4b11472b769a",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "lessons", "66d78ca31abd4b11472b769a"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-85fd8919-4d13-40b4-aa24-fb4e3d001574"
+          },
+          {
+            "name": "update lesson",
+            "id": "66fa1f89-b708-4d4d-a81e-e8c7cb12344a",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"title\":\"lesson2\",\r\n    \"description\":\"good\",\r\n    \"unit_Id\":\"66d78bfd1abd4b11472b7697\",\r\n    \"course_Id\":\"66d784aad41b16b868b3ad24\",\r\n    \"order\":2,\r\n    \"url\":\"https://www.youtube.com/watch?v=rrnHkoGLyNU\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/lessons/66d78ca31abd4b11472b769a",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "lessons", "66d78ca31abd4b11472b769a"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-66fa1f89-b708-4d4d-a81e-e8c7cb12344a"
+          },
+          {
+            "name": "delete lesson",
+            "id": "56304155-ace4-45f5-b0ee-8dba8ccfc2a6",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/lessons/66d78d041abd4b11472b769d",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "lessons", "66d78d041abd4b11472b769d"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-56304155-ace4-45f5-b0ee-8dba8ccfc2a6"
+          }
+        ],
+        "id": "2ad898fa-b9e7-428d-91f7-dbb7ac3d559c",
+        "uid": "34052771-2ad898fa-b9e7-428d-91f7-dbb7ac3d559c"
+      },
+      {
+        "name": "certificates",
+        "item": [
+          {
+            "name": "create certificate",
+            "id": "eccaa9b0-78a9-4e7c-8474-aaa2045d5867",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"student_Id\":\"66d78e481abd4b11472b76a6\",\r\n    \"certificateImage\":\"/images/course/pngtree-certificate-elements-layout-with-wavy-shape-border-png-image_934770.jpg\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/certificates",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "certificates"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-eccaa9b0-78a9-4e7c-8474-aaa2045d5867"
+          },
+          {
+            "name": "update certificate",
+            "id": "1aee2363-5cec-4bdb-a015-ab5399363696",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n   \"student_Id\":\"66d78e481abd4b11472b76a6\",\r\n    \"certificateImage\":\"/images/course/pngtree-certificate-elements-layout-with-wavy-shape-border-png-image_934770.jpg\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/certificates/66d78e811abd4b11472b76aa",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "certificates", "66d78e811abd4b11472b76aa"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-1aee2363-5cec-4bdb-a015-ab5399363696"
+          }
+        ],
+        "id": "69999608-16bd-47a5-b7ae-b7d1ad260c63",
+        "uid": "34052771-69999608-16bd-47a5-b7ae-b7d1ad260c63"
+      },
+      {
+        "name": "units",
+        "item": [
+          {
+            "name": "create unit",
+            "id": "fd8abff1-dc38-4ff3-8408-a85152c1cc03",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"unitName\":\"html5\",\r\n    \"course_Id\":\"66d784aad41b16b868b3ad24\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/units",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "units"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-fd8abff1-dc38-4ff3-8408-a85152c1cc03"
+          },
+          {
+            "name": "get all units",
+            "id": "d94124e4-06ce-47a4-a961-599dde7219b7",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/units",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "units"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-d94124e4-06ce-47a4-a961-599dde7219b7"
+          },
+          {
+            "name": "get unit",
+            "id": "5a322508-ec61-429b-bad8-5a336ea394cd",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/units/66d45ec2a04a31a4ddd95921",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "units", "66d45ec2a04a31a4ddd95921"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-5a322508-ec61-429b-bad8-5a336ea394cd"
+          },
+          {
+            "name": "update unit",
+            "id": "62dc5cf5-8968-4aa6-bca5-a7889e0b8eec",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"unitName\":\"css\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/units/66d45ec2a04a31a4ddd95921",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "units", "66d45ec2a04a31a4ddd95921"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-62dc5cf5-8968-4aa6-bca5-a7889e0b8eec"
+          },
+          {
+            "name": "delete unit",
+            "id": "d3a573a4-bd26-4198-b058-d22cb0b7b5bc",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/units/66d45ec2a04a31a4ddd95921",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "units", "66d45ec2a04a31a4ddd95921"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-d3a573a4-bd26-4198-b058-d22cb0b7b5bc"
+          }
+        ],
+        "id": "1c8368f9-65d1-4979-b65c-a3331575b25a",
+        "uid": "34052771-1c8368f9-65d1-4979-b65c-a3331575b25a"
+      },
+      {
+        "name": "reviews",
+        "item": [
+          {
+            "name": "create review",
+            "id": "2a7669b2-8426-452d-888d-a49ae6d96f56",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n   \"rating\":5,\r\n   \"comment\":\"good\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/reviews",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "reviews"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-2a7669b2-8426-452d-888d-a49ae6d96f56"
+          },
+          {
+            "name": "get all reviews",
+            "id": "e33987eb-b91f-46ac-a930-99ce9bb93d86",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/reviews",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "reviews"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-e33987eb-b91f-46ac-a930-99ce9bb93d86"
+          },
+          {
+            "name": "get review",
+            "id": "825bd3d7-e92d-4381-8f49-1f83eee24f84",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/reviews/66d5c2c5f4ffc1439ff3b6e6",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "reviews", "66d5c2c5f4ffc1439ff3b6e6"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-825bd3d7-e92d-4381-8f49-1f83eee24f84"
+          },
+          {
+            "name": "update review",
+            "id": "42e0256f-af9e-462c-a654-ad8790316c7f",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n   \"rating\":4,\r\n   \"comment\":\"good\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/reviews/66d5c2c5f4ffc1439ff3b6e6",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "reviews", "66d5c2c5f4ffc1439ff3b6e6"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-42e0256f-af9e-462c-a654-ad8790316c7f"
+          },
+          {
+            "name": "delete review",
+            "id": "1ad7a566-fa01-408c-97c3-c12fe32e7263",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/units/66d45ec2a04a31a4ddd95921",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "units", "66d45ec2a04a31a4ddd95921"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-1ad7a566-fa01-408c-97c3-c12fe32e7263"
+          }
+        ],
+        "id": "e743fd28-9d72-4774-9b43-143944a1ec24",
+        "uid": "34052771-e743fd28-9d72-4774-9b43-143944a1ec24"
+      },
+      {
+        "name": "course students",
+        "item": [
+          {
+            "name": "create courseStudent",
+            "id": "fe0e6872-779f-428d-abf2-bbb3c510730f",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"studentId\":45,\r\n    \"course_Id\":\"66d784aad41b16b868b3ad24\",\r\n    \"progress\":\"active\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/courseStudents",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courseStudents"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-fe0e6872-779f-428d-abf2-bbb3c510730f"
+          },
+          {
+            "name": "get all courseStudents",
+            "id": "e52de86e-2137-4c54-b3cf-0155cb51d0f9",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/courseStudents/",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courseStudents", ""]
+              }
+            },
+            "response": [],
+            "uid": "34052771-e52de86e-2137-4c54-b3cf-0155cb51d0f9"
+          },
+          {
+            "name": "get courseStudent",
+            "id": "f0fcae9b-889a-4dea-8fa8-8e3a756e5e07",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/courseStudents/66d78e481abd4b11472b76a6",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courseStudents", "66d78e481abd4b11472b76a6"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-f0fcae9b-889a-4dea-8fa8-8e3a756e5e07"
+          },
+          {
+            "name": "update courseStudent",
+            "id": "2a8e2c7f-4c85-4df1-bd0c-1869d4d74b1d",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n    \"studentId\":45,\r\n    \"course_Id\":\"66d784aad41b16b868b3ad24\",\r\n    \"progress\":\"not-active\"\r\n}",
+                "options": { "raw": { "language": "json" } }
+              },
+              "url": {
+                "raw": "http://localhost:3000/api/courseStudents/66d78e481abd4b11472b76a6",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "courseStudents", "66d78e481abd4b11472b76a6"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-2a8e2c7f-4c85-4df1-bd0c-1869d4d74b1d"
+          },
+          {
+            "name": "delete courseStudent",
+            "id": "31d57574-3a89-40eb-a945-d0bab9d3c2dc",
+            "protocolProfileBehavior": { "disableBodyPruning": true },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/units/66d45ec2a04a31a4ddd95921",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3000",
+                "path": ["api", "units", "66d45ec2a04a31a4ddd95921"]
+              }
+            },
+            "response": [],
+            "uid": "34052771-31d57574-3a89-40eb-a945-d0bab9d3c2dc"
+          }
+        ],
+        "id": "b3073b31-4bdb-45db-9959-1fc00b1fd9be",
+        "uid": "34052771-b3073b31-4bdb-45db-9959-1fc00b1fd9be"
+      }
+    ]
+  }
+}
